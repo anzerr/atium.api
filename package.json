@@ -1,0 +1,48 @@
+{
+	"name": "atium.api",
+	"version": "1.0.0",
+	"description": "poc into using a broker and workers for all api request",
+	"keywords": [],
+	"homepage": "https://github.com/anzerr/atium.api#readme",
+	"bugs": {
+		"url": "https://github.com/anzerr/atium.api/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:anzerr/atium.api.git"
+	},
+	"license": "MIT",
+	"author": "anzerr",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc -p ./",
+		"clean": "find ./src -regex \".*.(js|map|d.ts)\" -type f -delete && rm -Rf ./dist",
+		"start": "node index.js",
+		"start-api": "ts-node packages/api",
+		"start-broker": "ts-node packages/broker",
+		"start-worker": "ts-node packages/worker"
+	},
+	"eslintConfig": {
+		"extends": "@anzerr/eslint-config-typescript"
+	},
+	"dependencies": {
+		"@anzerr/atium.broker": "^1.0.24",
+		"@anzerr/console.color": "^1.0.11",
+		"@anzerr/fs.promisify": "^1.0.11",
+		"@anzerr/http.ts": "^1.0.36",
+		"@anzerr/request.libary": "^1.0.20",
+		"@anzerr/swagger.ts": "^1.0.19",
+		"@anzerr/unique.util": "^1.0.9",
+		"reflect-metadata": "^0.1.13"
+	},
+	"devDependencies": {
+		"@types/node": "^14.0.20",
+		"@anzerr/eslint-config-typescript": "^1.0.5",
+		"ts-node": "^8.10.2",
+		"typescript": "^3.9.6"
+	},
+	"engines": {
+		"node": ">= 0.10.0"
+	}
+}
