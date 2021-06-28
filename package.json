@@ -1,6 +1,6 @@
 {
 	"name": "atium.api",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "poc into using a broker and workers for all api request",
 	"keywords": [],
 	"homepage": "https://github.com/anzerr/atium.api#readme",
